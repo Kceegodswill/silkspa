@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Login | Silk Spa</title>
+<link rel="icon" type="image/png" href="images/favicon_pink_on_dark.png"/>
+<link rel="apple-touch-icon" href="images/favicon_pink_on_dark.png">
+<style>
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #0F0F0F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+}
+
+.login-box {
+  width: 360px;
+  padding: 40px;
+  background: #1C1C1C;
+  border: 1px solid rgba(201,169,110,0.3);
+}
+
+h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: white;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #C9A96E;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #A8843A;
+}
+</style>
+
+</head>
+<body>
+
+<div class="login-box">
+  <h2>Admin Login</h2>
+  <input id="username" type="text" placeholder="Username">
+<input id="password" type="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+</div>
+
+<script>
+
+function login() {
+  const user = document.getElementById("username").value;
+  const pass = document.getElementById("password").value;
+
+  if (user === "Silkspawellness" && pass === "Iamthesilkspa2026$") {
+    localStorage.setItem("isLoggedIn", "true");
+    window.location.href = "dashboard.html";
+  } else {
+    alert("Wrong username or password");
+  }
+}
+
+
+</script>
+
+</body>
+</html>

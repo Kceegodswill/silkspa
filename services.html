@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L5VL6B53D1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L5VL6B53D1');
+</script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Services & Pricing — Silk Spa Wellness & Beauty | Abuja</title>
+<meta name="description" content="Full services and pricing list for Silk Spa Wellness and Beauty, Gwarimpa, FCT Abuja. Massages, facials, body treatments, IV infusions and more."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="icon" type="image/png" href="images/favicon_pink_on_dark.png"/>
+<link rel="apple-touch-icon" href="images/favicon_pink_on_dark.png">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --ivory: #F5F0E8;
+    --ivory-dark: #EDE6D6;
+    --gold: #C9A96E;
+    --gold-light: #E8D5B0;
+    --gold-deep: #A8843A;
+    --black: #0F0F0F;
+    --black-soft: #1C1C1C;
+    --white: #FFFFFF;
+    --text-muted: #4A4035;
+    --text-light: #6B5E50;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Montserrat', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); background: var(--ivory); color: var(--black); overflow-x: hidden; }
+
+  /* ── NAVBAR ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 60px; height: 80px;
+    background: rgba(245,240,232,0.97);
+    box-shadow: 0 1px 30px rgba(201,169,110,0.12);
+    backdrop-filter: blur(10px);
+  }
+  .nav-logo { text-decoration: none; display: flex; align-items: center; }
+  .nav-logo img { height: 52px; width: auto; display: block; }
+  .nav-back {
+    font-family: var(--sans); font-size: 11px; font-weight: 500;
+    letter-spacing: 0.08em; color: var(--text-muted); text-decoration: none;
+    display: flex; align-items: center; gap: 8px; transition: color 0.3s;
+  }
+  .nav-back:hover { color: var(--gold); }
+  .nav-right { display: flex; align-items: center; gap: 24px; }
+  .nav-book {
+    font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+    color: var(--white); background: var(--gold); border-radius: 100px;
+    padding: 10px 24px; text-decoration: none; transition: background 0.3s;
+    white-space: nowrap;
+  }
+  .nav-book:hover { background: var(--gold-deep); }
+
+  /* ── HERO ── */
+  .services-hero {
+    background: var(--black);
+    padding: 140px 80px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  .hero-left {}
+  .hero-label {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.24em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 20px;
+  }
+  .hero-title {
+    font-family: var(--serif); font-size: clamp(42px, 5vw, 72px);
+    font-weight: 300; color: var(--white); line-height: 1.05; margin-bottom: 24px;
+  }
+  .hero-title em { font-style: italic; color: var(--gold-light); }
+  .hero-sub {
+    font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.5);
+    line-height: 1.9; margin-bottom: 40px; max-width: 440px;
+  }
+  .hero-cta {
+    display: inline-block; background: var(--gold); color: var(--white);
+    padding: 16px 44px; font-size: 11px; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none;
+    transition: background 0.3s, transform 0.2s;
+  }
+  .hero-cta:hover { background: var(--gold-deep); transform: translateY(-1px); }
+  .hero-right {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+  }
+  .hero-stat {
+    border: 1px solid rgba(201,169,110,0.2); padding: 28px 24px;
+    transition: border-color 0.3s;
+  }
+  .hero-stat:hover { border-color: rgba(201,169,110,0.5); }
+  .hero-stat-num {
+    font-family: var(--serif); font-size: 36px; font-weight: 300;
+    color: var(--gold); line-height: 1; margin-bottom: 8px;
+  }
+  .hero-stat-label {
+    font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.4);
+    letter-spacing: 0.06em; line-height: 1.5;
+  }
+
+  /* ── QUICK NAV ── */
+  .quick-nav {
+    background: var(--ivory-dark);
+    padding: 28px 80px;
+    display: flex; gap: 0; flex-wrap: wrap;
+    border-bottom: 1px solid rgba(201,169,110,0.2);
+    position: sticky; top: 80px; z-index: 100;
+  }
+  .quick-nav a {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--text-light);
+    text-decoration: none; padding: 8px 20px;
+    transition: color 0.3s, background 0.3s; white-space: nowrap;
+    border-right: 1px solid rgba(201,169,110,0.2);
+  }
+  .quick-nav a:first-child { padding-left: 0; }
+  .quick-nav a:hover { color: var(--gold); }
+
+  /* ── SERVICES CONTENT ── */
+  .services-content {
+    max-width: 1200px; margin: 0 auto;
+    padding: 80px 80px;
+  }
+  .content-header { margin-bottom: 72px; }
+  .content-label {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 12px;
+  }
+  .content-title {
+    font-family: var(--serif); font-size: clamp(32px, 3.5vw, 52px);
+    font-weight: 300; color: var(--black); margin-bottom: 12px;
+  }
+  .content-title em { font-style: italic; color: var(--gold-deep); }
+  .content-sub {
+    font-size: 13px; font-weight: 400; color: var(--text-muted);
+    line-height: 1.8; max-width: 600px;
+  }
+
+  /* ── CATEGORY SECTION ── */
+  .svc-category {
+    margin-bottom: 80px; padding-bottom: 80px;
+    border-bottom: 1px solid rgba(201,169,110,0.15);
+  }
+  .svc-category:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+  .svc-cat-header {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 60px; align-items: start; margin-bottom: 40px;
+  }
+  .svc-cat-left {}
+  .svc-cat-range {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 12px;
+  }
+  .svc-cat-title {
+    font-family: var(--serif); font-size: clamp(28px, 3vw, 40px);
+    font-weight: 300; color: var(--black); margin-bottom: 16px; line-height: 1.1;
+  }
+  .svc-cat-title em { font-style: italic; color: var(--gold-deep); }
+  .svc-cat-desc {
+    font-size: 13px; font-weight: 400; color: var(--text-muted); line-height: 1.8;
+    margin-bottom: 24px;
+  }
+  .svc-cat-book {
+    display: inline-block; font-size: 10px; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold);
+    text-decoration: none; border-bottom: 1px solid var(--gold-light);
+    padding-bottom: 2px; transition: border-color 0.3s;
+  }
+  .svc-cat-book:hover { border-color: var(--gold); }
+  .svc-cat-img {
+    width: 100%; height: 260px; object-fit: cover;
+    display: block; filter: saturate(0.85);
+    transition: filter 0.4s;
+  }
+  .svc-cat-img:hover { filter: saturate(1); }
+
+  /* ── SERVICE ITEMS ── */
+  .svc-items-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+    border: 1px solid rgba(201,169,110,0.12);
+  }
+  .svc-items-col {
+    padding: 0 24px;
+  }
+  .svc-items-col:first-child {
+    border-right: 1px solid rgba(201,169,110,0.12);
+  }
+  .svc-items-col-label {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--gold);
+    padding: 20px 0 12px; border-bottom: 1px solid rgba(201,169,110,0.15);
+    margin-bottom: 0;
+  }
+  .svc-item {
+    display: flex; justify-content: space-between; align-items: baseline;
+    padding: 14px 0; border-bottom: 1px solid rgba(201,169,110,0.1);
+    gap: 20px;
+  }
+  .svc-item:last-child { border-bottom: none; }
+  .svc-item-name {
+    font-size: 13px; font-weight: 400; color: var(--black); flex: 1; line-height: 1.4;
+  }
+  .svc-item-price {
+    font-size: 12px; font-weight: 600; color: var(--gold-deep);
+    white-space: normal; text-align: right; flex-shrink: 0; max-width: 55%;
+  }
+
+  /* Loading state */
+  .svc-loading {
+    padding: 40px; text-align: center;
+    font-size: 12px; color: var(--text-light);
+    letter-spacing: 0.06em; grid-column: 1/-1;
+  }
+
+  /* ── BOOK CTA BANNER ── */
+  .book-banner {
+    background: var(--black); padding: 80px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 60px;
+  }
+  .book-banner-text {}
+  .book-banner-label {
+    font-size: 10px; font-weight: 600; letter-spacing: 0.22em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 16px;
+  }
+  .book-banner-title {
+    font-family: var(--serif); font-size: clamp(28px, 3vw, 44px);
+    font-weight: 300; color: var(--white); line-height: 1.2;
+  }
+  .book-banner-title em { font-style: italic; color: var(--gold-light); }
+  .book-banner-actions { display: flex; gap: 16px; flex-shrink: 0; }
+  .btn-gold {
+    display: inline-block; background: var(--gold); color: var(--white);
+    padding: 16px 40px; font-size: 11px; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none;
+    transition: background 0.3s;
+  }
+  .btn-gold:hover { background: var(--gold-deep); }
+  .btn-wa {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: #25D366; color: var(--white);
+    padding: 16px 32px; font-size: 11px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none;
+    transition: background 0.3s;
+  }
+  .btn-wa:hover { background: #1da851; }
+  .btn-wa svg { width: 18px; height: 18px; fill: white; flex-shrink: 0; }
+
+  /* ── FOOTER ── */
+  .svc-footer {
+    background: #0A0A0A; padding: 48px 80px;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 20px;
+  }
+  .svc-footer-brand {
+    font-family: var(--serif); font-size: 22px; font-weight: 300; color: var(--white);
+  }
+  .svc-footer-brand span { color: var(--gold); }
+  .svc-footer-links { display: flex; gap: 28px; flex-wrap: wrap; }
+  .svc-footer-links a {
+    font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.35);
+    text-decoration: none; letter-spacing: 0.06em; transition: color 0.3s;
+  }
+  .svc-footer-links a:hover { color: var(--gold); }
+
+  /* ── WHATSAPP ── */
+  .whatsapp-float { position:fixed; bottom:36px; right:36px; width:56px; height:56px; background:#25D366; border-radius:50%; display:flex; align-items:center; justify-content:center; z-index:999; text-decoration:none; box-shadow:0 4px 20px rgba(37,211,102,0.35); transition:transform 0.3s; }
+  .whatsapp-float:hover { transform:scale(1.1); }
+  .whatsapp-float svg { width:28px; height:28px; fill:white; }
+
+  /* ── REVEAL ANIMATION ── */
+  .reveal { opacity:0; transform:translateY(24px); transition:opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity:1; transform:translateY(0); }
+
+  /* ── MOBILE ── */
+  @media (max-width: 900px) {
+    nav { padding: 0 24px; }
+    .services-hero { grid-template-columns: 1fr; padding: 120px 24px 60px; gap: 40px; }
+    .hero-right { grid-template-columns: 1fr 1fr; }
+    .quick-nav { padding: 20px 24px; top: 70px; }
+    .quick-nav a { font-size: 9px; padding: 6px 12px; }
+    .services-content { padding: 60px 24px; }
+    .svc-cat-header { grid-template-columns: 1fr; gap: 28px; }
+    .svc-items-grid { grid-template-columns: 1fr; }
+    .svc-items-col { padding: 0 16px; }
+    .svc-items-col:first-child { border-right: none; border-bottom: 1px solid rgba(201,169,110,0.12); }
+    .book-banner { flex-direction: column; padding: 60px 24px; }
+    .book-banner-actions { flex-direction: column; width: 100%; }
+    .btn-gold, .btn-wa { text-align: center; justify-content: center; }
+    .svc-footer { padding: 40px 24px; flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="images/logo-black.png" alt="Silk Spa"/>
+  </a>
+  <div class="nav-right">
+    <a href="index.html" class="nav-back"
+      onmouseover="this.style.color='#C9A96E'"
+      onmouseout="this.style.color='#4A4035'">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+      Back to Home
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="services-hero">
+  <div class="hero-left reveal">
+    <p class="hero-label">Silk Spa Gwarimpa, Abuja</p>
+    <h1 class="hero-title">Every <em>treatment</em><br/>we offer</h1>
+    <p class="hero-sub">Complete services and pricing for Silk Spa Wellness and Beauty. All prices are in Naira. Female and male pricing shown where applicable.</p>
+    <button onclick="openBookingModal()" class="hero-cta">Book a Session</button>
+  </div>
+  <div class="hero-right reveal">
+    <div class="hero-stat">
+      <div class="hero-stat-num">12+</div>
+      <div class="hero-stat-label">Service Categories</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">60+</div>
+      <div class="hero-stat-label">Individual Treatments</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">Tue–Sat</div>
+      <div class="hero-stat-label">9am to 7pm</div>
+    </div>
+    <div class="hero-stat">
+      <div class="hero-stat-num">₦5K+</div>
+      <div class="hero-stat-label">Starting from</div>
+    </div>
+  </div>
+</div>
+
+<!-- QUICK NAV -->
+<div class="quick-nav">
+  <a href="#svc-massage">Massage</a>
+  <a href="#svc-facials">Facials</a>
+  <a href="#svc-waxing">Waxing</a>
+  <a href="#svc-pedicure">Pedicure</a>
+  <a href="#svc-hammam">BodyScrub/Hammam</a>
+  <a href="#svc-sculpting">Body Sculpting</a>
+  <a href="#svc-microneedling">Microneedling</a>
+  <a href="#svc-teeth">Teeth</a>
+  <a href="#svc-iv">IV Infusions</a>
+  <a href="#svc-chemical-peels">Chemical Peels</a>
+  <a href="#svc-fillers">Fillers</a>
+  <a href="#svc-lipolysis">Lipolysis</a>
+  <a href="#svc-other">Other</a>
+</div>
+
+<!-- SERVICES CONTENT -->
+<div class="services-content">
+
+  <div class="content-header reveal">
+    <p class="content-label">Complete Price List</p>
+    <h2 class="content-title">All <em>Services</em> &amp; Pricing</h2>
+    <p class="content-sub">Every treatment we offer, listed in full. Prices are updated in real time. F = Female pricing, M = Male pricing where applicable.</p>
+  </div>
+
+  <!-- MASSAGE -->
+  <div class="svc-category" id="svc-massage">
+    <div class="svc-cat-header reveal">
+      <div class="svc-cat-left">
+        <p class="svc-cat-range">₦20,000 to ₦70,000</p>
+        <h3 class="svc-cat-title"><em>Massage</em> Therapy</h3>
+        <p class="svc-cat-desc">From relaxing Swedish strokes to therapeutic deep tissue work, our massage menu covers every need - solo or as a couple.</p>
+        <a href="booking.html" class="svc-cat-book">Book a Massage</a>
+      </div>
+      <img class="svc-cat-img" src="images/Massage.spa.jpg" alt="Massage therapy"/>
+    </div>
+    <div class="svc-items-grid" id="items-massage">
+      <div class="svc-loading">Loading services...</div>
+    </div>
+  </div>
+
+  <!-- FACIALS -->
+  <div class="svc-category" id="svc-facials">
+    <div class="svc-cat-header reveal">
+      <div class="svc-cat-left">
+        <p class="svc-cat-range">₦20,000 to ₦75,000</p>
+        <h3 class="svc-cat-title"><em>Facial</em> Treatments</h3>
+        <p class="svc-cat-desc">Science-backed facials tailored to every skin type and concern - from deep cleansing to our prestigious Silk Signature treatment.</p>
+        <a href="booking.html" class="svc-cat-book">Book a Facial</a>
+      </div>
+      <img class="svc-cat-img" src="images/Facials.spa.jpeg" alt="Facials"/>
+    </div>
+    <div class="svc-items-grid" id="items-facials">
+      <div class="svc-loading">Loading services...</div>
+    </div>
+  </div>
+
+  <!-- WAXING -->
+  <div class="svc-category" id="svc-waxing">
+    <div class="svc-cat-header reveal">
+      <div class="svc-cat-left">
+        <p class="svc-cat-range">₦5,000 to ₦125,000</p>
+        <h3 class="svc-cat-title"><em>Waxing</em></h3>
+        <p class="svc-cat-desc">Precise, professional waxing for every area of the body. Prices shown separately for Female and Male.</p>
+        <a href="booking.html" class="svc-cat-book">Book Waxing</a>
+      </div>
+      <img class="svc-cat-img" src="images/WaxingMain.jpeg" alt="Waxing"/>
+    </div>
+    <div class="svc-items-grid" id="items-waxing">
+      <div class="svc-loading">Loading services...</div>
+    </div>
+  </div>
+
+  <!-- PEDICURE -->
+  <div class="svc-category" id="svc-pedicure">
+    <div class="svc-cat-header reveal">
+      <div class="svc-cat-left">
+        <p class="svc-cat-range">₦6,000 to ₦40,000</p>
+        <h3 class="svc-cat-title">Pedicure &amp; <em>Manicure</em></h3>
+        <p class="svc-cat-desc">Indulge your hands and feet with treatments ranging from classic care to our luxurious jelly and paraffin experiences.</p>
+        <a href="booking.html" class="svc-cat-book">Book Now</a>
+      </div>
+      <img class="svc-cat-img" src="images/PedicureMian.jpeg" alt="Pedicure manicure"/>
+    </div>
+    <div class="svc-items-grid" id="items-pedicure">
+      <div class="svc-loading">Loading services...</div>
+    </div>
+  </div>
+
+  <!-- HAMMAM -->
+  <div class="svc-category" id="svc-hammam">
+    <div class="svc-cat-header reveal">
+      <div class="svc-cat-left">
+        <p class="svc-cat-range">₦20,000 to ₦70,000</p>
+        <h3 class="svc-cat-title">Body Scrub &amp; <em>Hammam</em></h3>
+        <p class="svc-cat-desc">Ancient bathing rituals reimagined in a modern luxury setting. Exfoliate, nourish, and leave glowing from head to toe.</p>
+        <a href="booking.html" class="svc-cat-book">Book a Hammam</a>
+      </div>
+      <img class="svc-cat-img" src="images/BodyscrubHammam.jpeg" alt="Body scrub hammam"/>
+    </div>
+    <div class="svc-items-grid" id="items-hammam">
+      <div class="svc-loading">Loading services...</div>
+    </div>
+  </div>
+
+  <!-- BODY SCULPTING -->
+  <div class="svc-category" id="svc-sculpting">
+    <div class="svc-cat-header reveal">
+      <div class="svc-cat-left">
+        <p class="svc-cat-range">₦20,000 per session to ₦90,000 (4 sessions)</p>
+        <h3 class="svc-cat-title">Body <em>Sculpting</em></h3>
+        <p class="svc-cat-desc">Non-invasive body contouring and enhancement treatments. Save more with our 4-session packages.</p>
+        <a href="booking.html" class="svc-cat-book">Book Now</a>
+      </div>
+      <img class="svc-cat-img" src="images/BodysculptingMain.jpeg" alt="Body sculpting"/>
+    </div>
+    <div class="svc-items-grid" id="items-sculpting">
+      <div class="svc-loading">Loading services...</div>
+    </div>
+  </div>
+
+  <!-- MICRONEEDLING -->
+  <div class="svc-category" id="svc-microneedling">
+    <div class="svc-cat-header reveal">
+      <div class="svc-cat-left">
+        <p class="svc-cat-range">₦50,000 to ₦250,000</p>
+        <h3 class="svc-cat-title"><em>Microneedling</em></h3>
+        <p class="svc-cat-desc">Advanced skin renewal using precision micro-channels to stimulate collagen, treat pigmentation and restore skin vitality.</p>
+        <a href="booking.html" class="svc-cat-book">Book Now</a>
+      </div>
+      <img class="svc-cat-img" src="images/MicroneedlingMain.jpeg" alt="Microneedling"/>
+    </div>
+    <div class="svc-items-grid" id="items-microneedling">
+      <div class="svc-loading">Loading services...</div>
+    </div>
+  </div>
+
+  <!-- TEETH -->
+  <div class="svc-category" id="svc-teeth">
+    <div class="svc-cat-header reveal">
+      <div class="svc-cat-left">
+        <p class="svc-cat-range">₦30,000 to ₦55,000</p>
+        <h3 class="svc-cat-title">Teeth <em>Whitening</em></h3>
+        <p class="svc-cat-desc">Professional-grade teeth whitening and dental polishing for a brighter, more confident smile.</p>
+        <a href="booking.html" class="svc-cat-book">Book Now</a>
+      </div>
+      <img class="svc-cat-img" src="images/Teethwhitening.spa.jpeg" alt="Teeth whitening"/>
+    </div>
+    <div class="svc-items-grid" id="items-teeth">
+      <div class="svc-loading">Loading services...</div>
+    </div>
+  </div>
+
+  <!-- IV INFUSIONS -->
+  <div class="svc-category" id="svc-iv">
+    <div class="svc-cat-header reveal">
+      <div class="svc-cat-left">
+        <p class="svc-cat-range">₦25,000 to ₦360,000</p>
+        <h3 class="svc-cat-title">IV <em>Infusions</em></h3>
+        <p class="svc-cat-desc">Intravenous wellness drips delivering vitamins, minerals and antioxidants directly into the bloodstream for rapid, visible results.</p>
+        <a href="booking.html" class="svc-cat-book">Book Now</a>
+      </div>
+      <img class="svc-cat-img" src="images/IVinfusionmain.jpeg" alt="IV infusions"/>
+    </div>
+    <div class="svc-items-grid" id="items-iv">
+      <div class="svc-loading">Loading services...</div>
+    </div>
+  </div>
+
+<!-- CHEMICAL PEELS -->
+  <div class="svc-category" id="svc-chemical-peels">
+    <div class="svc-cat-header reveal">
+      <div class="svc-cat-left">
+        <p class="svc-cat-range">₦25,000 to ₦80,000</p>
+        <h3 class="svc-cat-title">Chemical <em>Peels</em></h3>
+        <p class="svc-cat-desc">Experience a customized chemical peel designed to remove dull, damaged skin, stimulate cell renewal, and leave your complexion visibly brighter and smoother</p>
+        <a href="booking.html" class="svc-cat-book">Book Now</a>
+      </div>
+      <img class="svc-cat-img" src="images/chemical peel.silk.jpeg" alt="Chemical peels"/>
+    </div>
+    <div class="svc-items-grid" id="items-chemical-peels">
+      <div class="svc-loading">Loading services...</div>
+    </div>
+  </div>
+
+  <!-- FILLERS -->
+  <div class="svc-category" id="svc-fillers">
+    <div class="svc-cat-header reveal">
+      <div class="svc-cat-left">
+        <p class="svc-cat-range">PRP from ₦40,000 / HA from ₦80,000</p>
+        <h3 class="svc-cat-title">PRP &amp; HA <em>Fillers</em></h3>
+        <p class="svc-cat-desc">Natural-looking volume and contouring using PRP or HA fillers — per session pricing.</p>
+        <a href="booking.html" class="svc-cat-book">Book Now</a>
+      </div>
+      <img class="svc-cat-img" src="images/PRPfillersMain.jpeg" alt="Fillers"/>
+    </div>
+    <div class="svc-items-grid" id="items-fillers">
+      <div class="svc-loading">Loading services...</div>
+    </div>
+  </div>
+
+  <!-- LIPOLYSIS -->
+  <div class="svc-category" id="svc-lipolysis">
+    <div class="svc-cat-header reveal">
+      <div class="svc-cat-left">
+        <p class="svc-cat-range">₦90,000 per vial to ₦320,000 (4 vials)</p>
+        <h3 class="svc-cat-title">Weightloss / <em>Lipolysis</em></h3>
+        <p class="svc-cat-desc">Fat-dissolving injection therapy targeting specific areas. Number of vials required varies by treatment zone.</p>
+        <a href="booking.html" class="svc-cat-book">Book Now</a>
+      </div>
+      <img class="svc-cat-img" src="images/LipolysisMain.jpeg" alt="Lipolysis"/>
+    </div>
+    <div class="svc-items-grid" id="items-lipolysis">
+      <div class="svc-loading">Loading services...</div>
+    </div>
+  </div>
+
+  <!-- OTHER -->
+  <div class="svc-category" id="svc-other">
+    <div class="svc-cat-header reveal">
+      <div class="svc-cat-left">
+        <p class="svc-cat-range">₦30,000 upwards</p>
+        <h3 class="svc-cat-title">Other <em>Services</em></h3>
+        <p class="svc-cat-desc">Skin tag and mole removal, buttcials, vajacials and specialist intimate treatments for total body wellness.</p>
+        <a href="booking.html" class="svc-cat-book">Book Now</a>
+      </div>
+      <img class="svc-cat-img" src="images/SkintagsMAin.jpeg" alt="Other services"/>
+    </div>
+    <div class="svc-items-grid" id="items-other">
+      <div class="svc-loading">Loading services...</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- BOOK CTA BANNER -->
+<div class="book-banner">
+  <div class="book-banner-text">
+    <p class="book-banner-label">Ready to experience Silk?</p>
+    <h2 class="book-banner-title">Book your <em>treatment</em><br/>today</h2>
+  </div>
+  <div class="book-banner-actions">
+    <button onclick="openBookingModal()" class="btn-gold">Book Online</button>
+    <a href="https://wa.me/2349058237360" target="_blank" class="btn-wa">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp Us
+    </a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="svc-footer">
+  <div class="svc-footer-brand">Silk <span>Spa</span></div>
+  <div class="svc-footer-links">
+    <a href="index.html">Home</a>
+    <a href="booking.html">Book Now</a>
+    <a href="blog.html">Blog</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/2349058237360" class="whatsapp-float" target="_blank">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+  const API = 'https://silkspa-server.onrender.com/api';
+
+  // ── CATEGORY TO ELEMENT ID MAP ──
+  // Maps the category name in Supabase to the items container ID on this page
+  const categoryMap = {
+    'Massage Therapy':      'items-massage',
+    'Facial Treatments':    'items-facials',
+    'Waxing':               'items-waxing',
+    'Pedicure & Manicure':  'items-pedicure',
+    'Body Scrub & Hammam':  'items-hammam',
+    'Body Sculpting':       'items-sculpting',
+    'Microneedling':        'items-microneedling',
+    'Teeth Whitening':      'items-teeth',
+    'IV Infusions':         'items-iv',
+    'Chemical Peels':       'items-chemical-peels',
+    'PRP & HA Fillers':     'items-fillers',
+    'Weightloss / Lipolysis': 'items-lipolysis',
+    'Other Services':       'items-other',
+  };
+
+  // ── RENDER ITEMS INTO A CONTAINER ──
+  function renderItems(containerId, items) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    if (!items || items.length === 0) {
+      container.innerHTML = `
+        <div class="svc-loading">Contact us for pricing on this category.</div>
+      `;
+      return;
+    }
+
+    // Split items into two columns
+    const half = Math.ceil(items.length / 2);
+    const col1 = items.slice(0, half);
+    const col2 = items.slice(half);
+
+    function buildCol(colItems) {
+      return colItems.map(item => {
+        // Show female price, male price, or combined
+        let priceDisplay = '';
+       priceDisplay = item.price || item.female_price || item.male_price || '';
+        return `
+          <div class="svc-item">
+            <span class="svc-item-name">${item.name}</span>
+            <span class="svc-item-price">${priceDisplay}</span>
+          </div>
+        `;
+      }).join('');
+    }
+
+    container.innerHTML = `
+      <div class="svc-items-col">${buildCol(col1)}</div>
+      <div class="svc-items-col">${buildCol(col2)}</div>
+    `;
+  }
+
+  // ── LOAD ALL SERVICES ──
+  async function loadAllServices() {
+    try {
+      const res = await fetch(`${API}/services`);
+      const services = await res.json();
+
+      // Group by category
+      const grouped = {};
+      services.forEach(s => {
+        if (!grouped[s.category]) grouped[s.category] = [];
+        grouped[s.category].push(s);
+      });
+
+      // Render each category into its container
+      Object.keys(categoryMap).forEach(categoryName => {
+        const containerId = categoryMap[categoryName];
+        const items = grouped[categoryName] || [];
+        renderItems(containerId, items);
+      });
+
+    } catch (err) {
+      // If server is down, show contact message in all containers
+      Object.values(categoryMap).forEach(containerId => {
+        const container = document.getElementById(containerId);
+        if (container) {
+          container.innerHTML = `
+            <div class="svc-loading">
+              Could not load pricing. Please contact us on WhatsApp for current rates.
+            </div>
+          `;
+        }
+      });
+    }
+  }
+
+  // ── SCROLL REVEAL ──
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) e.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // ── HANDLE SEARCH QUERY FROM HOMEPAGE ──
+window.addEventListener('DOMContentLoaded', function() {
+  // Check if there is a search query in the URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const query = urlParams.get('q');
+
+  if (query) {
+    // Show a search message at the top
+    const contentHeader = document.querySelector('.content-header');
+    if (contentHeader) {
+      const searchMsg = document.createElement('div');
+      searchMsg.style.cssText = `
+        background: rgba(201,169,110,0.1);
+        border: 1px solid rgba(201,169,110,0.3);
+        padding: 14px 20px;
+        margin-bottom: 32px;
+        font-size: 13px;
+        color: var(--text-muted);
+      `;
+      searchMsg.innerHTML = `Showing all services for <strong style="color:var(--gold);">"${query}"</strong> — browse below or use the quick navigation above.`;
+      contentHeader.after(searchMsg);
+    }
+  }
+
+  // Handle hash scrolling with offset for fixed navbar
+  if (window.location.hash) {
+    setTimeout(function() {
+      const target = document.querySelector(window.location.hash);
+      if (target) {
+        const offset = 160; // navbar + quick nav height
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+    }, 300);
+  }
+});
+  // ── INIT ──
+  loadAllServices();
+</script>
+<!-- BOOKING CHOICE MODAL -->
+<div id="bookingModal" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.7); backdrop-filter:blur(4px); align-items:center; justify-content:center;">
+  <div style="background:var(--ivory); max-width:480px; width:90%; padding:48px 40px; position:relative; animation:modalIn 0.25s ease;">
+    <button onclick="closeBookingModal()" style="position:absolute; top:16px; right:20px; background:none; border:none; font-size:24px; color:var(--text-muted); cursor:pointer; line-height:1;">×</button>
+    <p style="font-size:10px; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:12px;">Book a Treatment</p>
+    <h2 style="font-family:var(--serif); font-size:28px; font-weight:300; color:var(--black); margin-bottom:8px; line-height:1.2;">Who is this <em style="font-style:italic; color:var(--gold);">for?</em></h2>
+    <p style="font-size:13px; color:var(--text-muted); margin-bottom:36px; line-height:1.7;">Book a session for yourself or surprise someone special with a luxury spa gift.</p>
+
+    <div style="display:flex; flex-direction:column; gap:14px;">
+      <a href="booking.html" style="display:block; padding:18px 24px; background:var(--black); color:var(--white); text-decoration:none; text-align:center; font-size:11px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; transition:background 0.2s;">
+        Book for Myself
+      </a>
+      <a href="giftservice.html" style="display:block; padding:18px 24px; background:transparent; color:var(--black); text-decoration:none; text-align:center; font-size:11px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; border:1.5px solid var(--gold); transition:all 0.2s;">
+        🎁 Gift Someone a Treatment
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+  @keyframes modalIn {
+    from { opacity:0; transform:translateY(12px); }
+    to   { opacity:1; transform:translateY(0); }
+  }
+</style>
+
+<script>
+  function openBookingModal() {
+    const modal = document.getElementById('bookingModal');
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeBookingModal() {
+    const modal = document.getElementById('bookingModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+  // Close when clicking outside the modal box
+  document.getElementById('bookingModal').addEventListener('click', function(e) {
+    if (e.target === this) closeBookingModal();
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L5VL6B53D1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-L5VL6B53D1');
+</script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Gift a Spa Experience — Silk Spa Wellness & Beauty</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link rel="icon" type="image/png" href="images/favicon_pink_on_dark.png"/>
+<script src="https://js.paystack.co/v1/inline.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>emailjs.init('9mBhRaCWpcESc9rr5');</script>
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --ivory: #F5F0E8;
+    --ivory-dark: #EDE6D6;
+    --gold: #C9A96E;
+    --gold-light: #E8D5B0;
+    --gold-deep: #A8843A;
+    --black: #0F0F0F;
+    --black-soft: #1C1C1C;
+    --white: #FFFFFF;
+    --text-muted: #4A4035;
+    --text-light: #6B5E50;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'Montserrat', sans-serif;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); background: var(--ivory); color: var(--black); min-height: 100vh; }
+
+  /* NAVBAR */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 52px; height: 80px;
+    background: rgba(245,240,232,0.97);
+    box-shadow: 0 1px 30px rgba(201,169,110,0.12);
+    backdrop-filter: blur(10px);
+  }
+  .nav-logo { text-decoration: none; display: flex; align-items: center; }
+  .logo-img { width: 180px; height: auto; display: block; }
+  .nav-back { font-size: 11px; font-weight: 500; letter-spacing: 0.08em; color: var(--text-muted); text-decoration: none; display: flex; align-items: center; gap: 8px; transition: color 0.3s; }
+  .nav-back:hover { color: var(--gold); }
+
+  /* GIFT HERO BANNER */
+  .gift-hero {
+    background: var(--black);
+    padding: 120px 52px 60px;
+    text-align: center;
+  }
+  .gift-hero-icon { font-size: 36px; margin-bottom: 16px; }
+  .gift-hero-label { font-size: 10px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+  .gift-hero-title { font-family: var(--serif); font-size: clamp(36px, 5vw, 64px); font-weight: 300; color: var(--white); line-height: 1.1; margin-bottom: 16px; }
+  .gift-hero-title em { font-style: italic; color: var(--gold-light); }
+  .gift-hero-sub { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.5); line-height: 1.8; max-width: 480px; margin: 0 auto; }
+
+  .page-wrap { max-width: 820px; margin: 0 auto; padding: 60px 40px 100px; }
+
+  /* STEPS */
+  .steps { display: flex; align-items: center; gap: 0; margin-bottom: 48px; }
+  .step { display: flex; align-items: center; gap: 12px; flex: 1; }
+  .step-num { width: 36px; height: 36px; border-radius: 50%; border: 1.5px solid var(--gold-light); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; color: var(--text-light); transition: all 0.3s; flex-shrink: 0; background: var(--white); }
+  .step.active .step-num { background: var(--gold); border-color: var(--gold); color: var(--white); }
+  .step.done .step-num { background: var(--black); border-color: var(--black); color: var(--white); }
+  .step-label { font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-light); transition: color 0.3s; }
+  .step.active .step-label { color: var(--black); }
+  .step.done .step-label { color: var(--text-muted); }
+  .step-line { flex: 1; height: 1px; background: var(--gold-light); margin: 0 16px; }
+
+  /* PANELS */
+  .booking-panel { display: none; }
+  .booking-panel.active { display: block; }
+  .form-section-title { font-family: var(--serif); font-size: 26px; font-weight: 400; color: var(--black); margin-bottom: 24px; }
+  .form-section-title em { font-style: italic; color: var(--gold-deep); }
+
+  /* CATEGORY GRID */
+  .category-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 28px; }
+  .cat-btn { background: var(--white); border: 1.5px solid var(--ivory-dark); padding: 14px 12px; text-align: left; cursor: pointer; transition: all 0.25s; position: relative; height: 78px; display: flex; flex-direction: column; justify-content: center; gap: 4px; }
+  .cat-btn:hover { border-color: var(--gold-light); background: var(--ivory); }
+  .cat-btn.selected { border-color: var(--gold); background: var(--ivory-dark); }
+  .cat-btn.selected::after { content: '✓'; position: absolute; top: 8px; right: 10px; font-size: 10px; color: var(--gold); font-weight: 700; }
+  .cat-btn.active-cat { border-color: var(--gold); background: var(--black); }
+  .cat-btn.active-cat .cat-btn-name { color: var(--white); }
+  .cat-btn.active-cat .cat-btn-range { color: var(--gold-light); }
+  .cat-btn-name { font-family: var(--serif); font-size: 14px; font-weight: 400; color: var(--black); display: block; line-height: 1.25; }
+  .cat-btn-range { font-size: 10px; font-weight: 500; letter-spacing: 0.03em; color: var(--gold-deep); display: block; }
+
+  .services-expand { display: none; grid-column: 1 / -1; background: var(--white); border: 1.5px solid var(--gold); animation: expandIn 0.22s ease; margin-top: -2px; }
+  .services-expand.open { display: block; }
+  @keyframes expandIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: translateY(0); } }
+  .expand-header { display: flex; justify-content: space-between; align-items: center; padding: 12px 18px; background: var(--black); border-bottom: 1px solid rgba(201,169,110,0.2); }
+  .expand-header-title { font-family: var(--serif); font-size: 16px; font-weight: 400; color: var(--white); }
+  .expand-header-right { display: flex; align-items: center; gap: 14px; }
+  .expand-count { font-size: 10px; font-weight: 600; color: var(--gold); letter-spacing: 0.06em; }
+  .expand-close { background: none; border: none; color: rgba(255,255,255,0.45); font-size: 22px; cursor: pointer; line-height: 1; padding: 0; transition: color 0.2s; }
+  .expand-close:hover { color: var(--gold); }
+  .expand-list { padding: 4px 0; max-height: 300px; overflow-y: auto; }
+  .expand-svc-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 18px; border-bottom: 1px solid var(--ivory-dark); cursor: pointer; transition: background 0.15s; gap: 14px; }
+  .expand-svc-item:last-child { border-bottom: none; }
+  .expand-svc-item:hover { background: var(--ivory); }
+  .expand-svc-item.selected { background: rgba(201,169,110,0.06); }
+  .expand-svc-item.selected .expand-svc-name { color: var(--gold-deep); font-weight: 600; }
+  .expand-svc-left { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 0; }
+  .expand-checkbox { width: 17px; height: 17px; border: 1.5px solid var(--gold-light); border-radius: 3px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: all 0.2s; font-size: 10px; color: transparent; }
+  .expand-svc-item.selected .expand-checkbox { background: var(--gold); border-color: var(--gold); color: var(--white); }
+  .expand-svc-name { font-size: 13px; font-weight: 400; color: var(--black); line-height: 1.4; }
+  .expand-svc-price { font-size: 12px; font-weight: 600; color: var(--gold-deep); white-space: nowrap; flex-shrink: 0; text-align: right; }
+
+  .gender-wrap { margin-bottom: 32px; }
+  .gender-label { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 12px; display: block; }
+  .gender-toggle { display: flex; gap: 0; }
+  .gender-btn { flex: 1; padding: 12px; border: 1.5px solid var(--ivory-dark); background: var(--white); cursor: pointer; font-family: var(--sans); font-size: 12px; font-weight: 500; color: var(--text-muted); transition: all 0.25s; letter-spacing: 0.06em; }
+  .gender-btn:first-child { border-right: none; }
+  .gender-btn.selected { background: var(--black); border-color: var(--black); color: var(--white); }
+
+  /* CALENDAR */
+  .calendar-wrap { margin-bottom: 36px; }
+  .cal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
+  .cal-month { font-family: var(--serif); font-size: 22px; font-weight: 400; color: var(--black); }
+  .cal-nav { background: none; border: 1px solid var(--gold-light); width: 36px; height: 36px; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--gold-deep); font-size: 16px; transition: all 0.25s; }
+  .cal-nav:hover { background: var(--gold); border-color: var(--gold); color: var(--white); }
+  .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 6px; }
+  .cal-day-name { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-light); text-align: center; padding: 8px 0; }
+  .cal-day { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 400; color: var(--text-muted); cursor: pointer; transition: all 0.2s; border: 1.5px solid transparent; background: var(--white); }
+  .cal-day:hover:not(.disabled):not(.empty) { border-color: var(--gold-light); color: var(--black); }
+  .cal-day.selected { background: var(--gold); color: var(--white); border-color: var(--gold); font-weight: 600; }
+  .cal-day.today { border-color: var(--gold-light); font-weight: 600; color: var(--black); }
+  .cal-day.disabled { color: #D0C8BC; cursor: not-allowed; background: var(--ivory); }
+  .cal-day.empty { background: transparent; border: none; cursor: default; }
+
+  /* TIME SLOTS */
+  .timeslots-wrap { margin-bottom: 36px; display: none; }
+  .timeslots-wrap.visible { display: block; }
+  .timeslots-label { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 16px; }
+  .timeslots-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .time-slot { background: var(--white); border: 1.5px solid var(--ivory-dark); padding: 12px 8px; text-align: center; cursor: pointer; font-size: 12px; font-weight: 500; color: var(--text-muted); transition: all 0.25s; }
+  .time-slot:hover:not(.booked) { border-color: var(--gold-light); color: var(--black); }
+  .time-slot.selected { background: var(--black); border-color: var(--black); color: var(--white); }
+
+  /* FORM FIELDS */
+  .fields-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+  .field-wrap { display: flex; flex-direction: column; gap: 6px; }
+  .field-wrap.full { grid-column: 1 / -1; }
+  .field-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); }
+  .field-input { background: var(--white); border: 1.5px solid var(--ivory-dark); padding: 14px 16px; font-family: var(--sans); font-size: 13px; color: var(--black); outline: none; transition: border-color 0.25s; width: 100%; }
+  .field-input:focus { border-color: var(--gold); }
+  .field-input::placeholder { color: #B0A898; }
+  textarea.field-input { min-height: 100px; resize: vertical; }
+
+  /* SECTION DIVIDER */
+  .form-section-divider { font-size: 10px; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin: 32px 0 20px; padding-bottom: 10px; border-bottom: 1px solid var(--gold-light); }
+
+  /* ANONYMITY TOGGLE */
+  .anon-wrap { display: flex; align-items: center; justify-content: space-between; background: var(--white); border: 1.5px solid var(--ivory-dark); padding: 18px 20px; margin-bottom: 24px; cursor: pointer; transition: border-color 0.25s; }
+  .anon-wrap:hover { border-color: var(--gold-light); }
+  .anon-left { flex: 1; }
+  .anon-title { font-size: 13px; font-weight: 500; color: var(--black); margin-bottom: 4px; }
+  .anon-sub { font-size: 11px; font-weight: 300; color: var(--text-light); line-height: 1.5; }
+  .anon-toggle { width: 44px; height: 24px; background: var(--ivory-dark); border-radius: 100px; position: relative; transition: background 0.3s; flex-shrink: 0; margin-left: 16px; }
+  .anon-toggle.on { background: var(--gold); }
+  .anon-toggle-dot { position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; background: var(--white); border-radius: 50%; transition: transform 0.3s; box-shadow: 0 1px 4px rgba(0,0,0,0.15); }
+  .anon-toggle.on .anon-toggle-dot { transform: translateX(20px); }
+
+  /* BOOKING NOTE */
+  .booking-note { background: rgba(201,169,110,0.08); border-left: 3px solid var(--gold); padding: 14px 18px; margin-bottom: 28px; font-size: 12px; font-weight: 400; color: var(--text-muted); line-height: 1.7; }
+
+  /* BUTTONS */
+  .btn-row { display: flex; gap: 12px; align-items: center; margin-top: 36px; }
+  .btn-next { background: var(--gold); color: var(--white); border: none; padding: 16px 48px; font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: background 0.3s, transform 0.2s; }
+  .btn-next:hover { background: var(--gold-deep); transform: translateY(-1px); }
+  .btn-back-step { background: none; border: 1.5px solid var(--ivory-dark); color: var(--text-muted); padding: 16px 32px; font-family: var(--sans); font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; cursor: pointer; transition: all 0.3s; }
+  .btn-back-step:hover { border-color: var(--gold-light); color: var(--black); }
+
+  /* SERVICE COUNTER */
+  .service-counter { display: flex; align-items: center; gap: 10px; padding: 16px 20px; background: var(--ivory-dark); border-left: 3px solid var(--gold); margin-top: 16px; animation: fadeSlideIn 0.3s ease; }
+  @keyframes fadeSlideIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+  .service-counter-icon { color: var(--gold); font-size: 11px; flex-shrink: 0; }
+  #serviceCounterText { font-size: 13px; font-weight: 500; color: var(--black); flex: 1; }
+  .service-counter-total { font-family: var(--serif); font-size: 15px; font-weight: 400; color: var(--gold-deep); white-space: nowrap; }
+
+  /* REVIEW SUMMARY */
+  .review-summary { border: 1.5px solid var(--ivory-dark); margin-bottom: 36px; background: var(--white); }
+  .review-row { display: flex; justify-content: space-between; align-items: baseline; padding: 14px 20px; border-bottom: 1px solid var(--ivory-dark); gap: 20px; }
+  .review-row:last-child { border-bottom: none; }
+  .review-row-total { background: var(--ivory); }
+  .review-key { font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-light); flex-shrink: 0; }
+  .review-val { font-size: 13px; font-weight: 400; color: var(--black); text-align: right; line-height: 1.5; }
+  .review-total-val { font-family: var(--serif); font-size: 22px; font-weight: 400; color: var(--gold-deep); }
+
+  /* PAYMENT OPTIONS */
+  .payment-options { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 24px; }
+  .pay-opt { border: 1.5px solid var(--ivory-dark); padding: 20px 18px; cursor: pointer; transition: all 0.25s; background: var(--white); }
+  .pay-opt:hover { border-color: var(--gold-light); }
+  .pay-opt.selected { border-color: var(--gold); background: rgba(201,169,110,0.04); }
+  .pay-opt-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+  .pay-opt-label { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--black); }
+  .pay-opt-check { width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid var(--gold-light); display: flex; align-items: center; justify-content: center; font-size: 9px; color: transparent; transition: all 0.2s; }
+  .pay-opt.selected .pay-opt-check { background: var(--gold); border-color: var(--gold); color: var(--white); }
+  .pay-opt-desc { font-size: 11px; color: var(--text-muted); line-height: 1.6; margin-bottom: 12px; }
+  .pay-opt-amount { font-family: var(--serif); font-size: 22px; font-weight: 400; color: var(--gold-deep); display: block; }
+  .pay-now-row { display: flex; justify-content: space-between; align-items: center; background: var(--black); padding: 20px 24px; margin-bottom: 32px; }
+  .pay-now-label { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+  .pay-now-amount { font-family: var(--serif); font-size: 32px; font-weight: 400; color: var(--gold); }
+
+  /* SUCCESS SCREEN */
+  .success-screen { display: none; text-align: center; padding: 80px 40px; background: var(--white); max-width: 600px; margin: 0 auto; }
+  .success-screen.visible { display: block; }
+  .success-icon { font-size: 48px; margin-bottom: 24px; }
+  .success-title { font-family: var(--serif); font-size: 40px; font-weight: 300; color: var(--black); margin-bottom: 16px; }
+  .success-title em { font-style: italic; color: var(--gold-deep); }
+  .success-text { font-size: 13px; font-weight: 400; color: var(--text-muted); line-height: 1.8; margin-bottom: 32px; }
+  .success-ref { font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); background: rgba(201,169,110,0.1); border: 1px solid rgba(201,169,110,0.25); padding: 10px 24px; display: inline-block; margin-bottom: 32px; }
+  .btn-home { display: inline-block; background: var(--black); color: var(--white); padding: 14px 40px; text-decoration: none; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; transition: background 0.3s; }
+  .btn-home:hover { background: var(--gold); }
+
+  /* WHATSAPP */
+  .whatsapp-float { position: fixed; bottom: 36px; right: 36px; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 500; text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,0.35); transition: transform 0.3s; }
+  .whatsapp-float:hover { background: #1da851; }
+  .whatsapp-float svg { width: 28px; height: 28px; fill: white; }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    nav { padding: 0 20px; height: 64px; }
+    .gift-hero { padding: 100px 24px 48px; }
+    .page-wrap { padding: 40px 20px 80px; }
+    .category-grid { grid-template-columns: repeat(2, 1fr); }
+    .fields-grid { grid-template-columns: 1fr; }
+    .field-wrap.full { grid-column: 1; }
+    .payment-options { grid-template-columns: 1fr; }
+    .steps { overflow: hidden; }
+    .step { flex-direction: column; align-items: center; gap: 6px; flex: 1; min-width: 0; }
+    .step-label { font-size: 9px; letter-spacing: 0.04em; text-align: center; white-space: normal; }
+    .step-num { width: 28px; height: 28px; font-size: 11px; }
+    .step-line { margin: 0 4px; min-width: 8px; }
+    .timeslots-grid { grid-template-columns: repeat(3, 1fr); }
+    .btn-row { flex-direction: column; }
+    .btn-next, .btn-back-step { width: 100%; text-align: center; }
+  }
+
+  @media (max-width: 420px) {
+    .category-grid { grid-template-columns: 1fr; }
+    .timeslots-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="images/logo-black.png" alt="Silk Spa" class="logo-img"/>
+  </a>
+  <a href="index.html" class="nav-back"
+    onmouseover="this.style.color='#C9A96E'"
+    onmouseout="this.style.color='#4A4035'">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    Back to Home
+  </a>
+</nav>
+
+<!-- GIFT HERO -->
+<div class="gift-hero">
+  <div class="gift-hero-icon">🎁</div>
+  <p class="gift-hero-label">Gift a Spa Experience</p>
+  <h1 class="gift-hero-title">Give the gift of<br/><em>pure bliss</em></h1>
+  <p class="gift-hero-sub">Because some people deserve to be pampered — and you are exactly the person to make that happen. Choose a treatment, pick a date, and let Silk Spa do the rest.</p>
+</div>
+
+<!-- MAIN WRAP -->
+<div id="mainWrap">
+<div class="page-wrap">
+
+  <!-- Steps -->
+  <div class="steps">
+    <div class="step active" id="stepIndicator1">
+      <div class="step-num">1</div>
+      <span class="step-label">Treatment</span>
+    </div>
+    <div class="step-line"></div>
+    <div class="step" id="stepIndicator2">
+      <div class="step-num">2</div>
+      <span class="step-label">Date &amp; Time</span>
+    </div>
+    <div class="step-line"></div>
+    <div class="step" id="stepIndicator3">
+      <div class="step-num">3</div>
+      <span class="step-label">Gift Details</span>
+    </div>
+    <div class="step-line"></div>
+    <div class="step" id="stepIndicator4">
+      <div class="step-num">4</div>
+      <span class="step-label">Review &amp; Pay</span>
+    </div>
+  </div>
+
+  <!-- STEP 1 — CHOOSE SERVICE -->
+  <div class="booking-panel active" id="panel1">
+    <h2 class="form-section-title">Choose a <em>treatment</em> to gift</h2>
+
+    <div class="gender-wrap">
+      <span class="gender-label">This gift is for a</span>
+      <div class="gender-toggle">
+        <button class="gender-btn selected" onclick="selectGender('female', this)">Female</button>
+        <button class="gender-btn" onclick="selectGender('male', this)">Male</button>
+      </div>
+    </div>
+
+    <div class="category-grid" id="categoryGrid">
+      <button class="cat-btn" onclick="selectCategory('Massage Therapy', '₦22,000 to ₦60,000', this)"><span class="cat-btn-name">Massage Therapy</span><span class="cat-btn-range">From ₦20,000</span></button>
+      <button class="cat-btn" onclick="selectCategory('Facial Treatments', '₦15,000 to ₦70,000', this)"><span class="cat-btn-name">Facial Treatments</span><span class="cat-btn-range">From ₦20,000</span></button>
+      <button class="cat-btn" onclick="selectCategory('Body Scrub & Hammam', '₦15,000 to ₦65,000', this)"><span class="cat-btn-name">Body Scrub &amp; Hammam</span><span class="cat-btn-range">From ₦25,000</span></button>
+      <button class="cat-btn" onclick="selectCategory('IV Infusions', '₦25,000 to ₦360,000', this)"><span class="cat-btn-name">IV Infusions</span><span class="cat-btn-range">From ₦50,000</span></button>
+      <button class="cat-btn" onclick="selectCategory('Chemical Peels', '₦25,000 to ₦80,000', this)"><span class="cat-btn-name">Chemical Peels</span><span class="cat-btn-range">From ₦25,000</span></button>
+      <button class="cat-btn" onclick="selectCategory('Body Sculpting', '₦15,000 to ₦90,000', this)"><span class="cat-btn-name">Body Sculpting</span><span class="cat-btn-range">From ₦20,000</span></button>
+      <button class="cat-btn" onclick="selectCategory('Microneedling', '₦40,000 to ₦220,000', this)"><span class="cat-btn-name">Microneedling</span><span class="cat-btn-range">From ₦50,000</span></button>
+      <button class="cat-btn" onclick="selectCategory('Waxing', '₦5,000 to ₦125,000', this)"><span class="cat-btn-name">Waxing</span><span class="cat-btn-range">From ₦5,000</span></button>
+      <button class="cat-btn" onclick="selectCategory('Pedicure & Manicure', '₦6,000 to ₦40,000', this)"><span class="cat-btn-name">Pedicure &amp; Manicure</span><span class="cat-btn-range">From ₦6,000</span></button>
+      <button class="cat-btn" onclick="selectCategory('Teeth Whitening', '₦30,000 to ₦55,000', this)"><span class="cat-btn-name">Teeth Whitening</span><span class="cat-btn-range">From ₦30,000</span></button>
+      <button class="cat-btn" onclick="selectCategory('PRP & HA Fillers', '₦30,000 to ₦550,000', this)"><span class="cat-btn-name">PRP &amp; HA Fillers</span><span class="cat-btn-range">From ₦30,000</span></button>
+      <button class="cat-btn" onclick="selectCategory('Weightloss / Lipolysis', '₦80,000 per vial', this)"><span class="cat-btn-name">Weightloss / Lipolysis</span><span class="cat-btn-range">From ₦90,000</span></button>
+      <button class="cat-btn" onclick="selectCategory('Other Services', '₦30,000 upwards', this)"><span class="cat-btn-name">Other Services</span><span class="cat-btn-range">From ₦30,000</span></button>
+      <button class="cat-btn" onclick="selectCategory('Packages', '₦72,000 to ₦380,000', this)"><span class="cat-btn-name">Packages</span><span class="cat-btn-range">From ₦72,000</span></button>
+    </div>
+
+    <div class="services-expand" id="servicesExpand">
+      <div class="expand-header">
+        <span class="expand-header-title" id="expandTitle">Select a service</span>
+        <div class="expand-header-right">
+          <span class="expand-count" id="expandCount">0 selected</span>
+          <button class="expand-close" onclick="closeExpand()">×</button>
+        </div>
+      </div>
+      <div class="expand-list" id="expandList"></div>
+    </div>
+
+    <!-- Counter -->
+    <div class="service-counter" id="serviceCounter" style="display:none;">
+      <span class="service-counter-icon">✦</span>
+      <span id="serviceCounterText">You have selected 1 service</span>
+      <span class="service-counter-total" id="serviceCounterTotal"></span>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn-next" onclick="goToStep2()">Continue to Date &amp; Time</button>
+    </div>
+  </div>
+
+  <!-- STEP 2 — DATE & TIME -->
+  <div class="booking-panel" id="panel2">
+    <h2 class="form-section-title">Pick a <em>date &amp; time</em></h2>
+
+    <div class="booking-note">
+      Silk Spa is open Tuesday to Saturday, 9:00am to 7:00pm. All bookings are confirmed within 1 hour. The recipient will be notified of the appointment details.
+    </div>
+
+    <div class="calendar-wrap">
+      <div class="cal-header">
+        <button class="cal-nav" onclick="changeMonth(-1)">&#8249;</button>
+        <span class="cal-month" id="calMonth"></span>
+        <button class="cal-nav" onclick="changeMonth(1)">&#8250;</button>
+      </div>
+      <div class="cal-grid" id="calGrid"></div>
+    </div>
+
+    <div class="timeslots-wrap" id="timeslotsWrap">
+      <p class="timeslots-label">Available times for <span id="selectedDateLabel"></span></p>
+      <div class="timeslots-grid" id="timeslotsGrid"></div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn-back-step" onclick="goToStep(1)">Back</button>
+      <button class="btn-next" onclick="goToStep3()">Continue to Gift Details</button>
+    </div>
+  </div>
+
+  <div class="booking-panel" id="panel3">
+    <h2 class="form-section-title">Your <em>gift details</em></h2>
+
+    <p class="form-section-divider">About You — The Gifter</p>
+    <div class="fields-grid">
+      <div class="field-wrap">
+        <label class="field-label">Your First Name</label>
+        <input class="field-input" id="senderFirstName" type="text" placeholder="e.g. Amaka"/>
+      </div>
+      <div class="field-wrap">
+        <label class="field-label">Your Last Name</label>
+        <input class="field-input" id="senderLastName" type="text" placeholder="e.g. Okafor"/>
+      </div>
+      <div class="field-wrap">
+        <label class="field-label">Your Phone Number</label>
+        <input class="field-input" id="senderPhone" type="tel" placeholder="e.g. 0801 234 5678"/>
+      </div>
+      <div class="field-wrap">
+        <label class="field-label">Your Email Address</label>
+        <input class="field-input" id="senderEmail" type="email" placeholder="e.g. amaka@email.com"/>
+      </div>
+    </div>
+
+    <div class="anon-wrap" onclick="toggleAnonymity()">
+      <div class="anon-left">
+        <p class="anon-title">Keep me anonymous</p>
+        <p class="anon-sub">When off, the recipient will see your name. When on, they will only know it is from "A Secret Admirer".</p>
+      </div>
+      <div class="anon-toggle" id="anonToggle">
+        <div class="anon-toggle-dot"></div>
+      </div>
+    </div>
+
+    <p class="form-section-divider">About the Lucky One — The Recipient</p>
+    <div class="fields-grid">
+      <div class="field-wrap">
+        <label class="field-label">Recipient First Name</label>
+        <input class="field-input" id="recipientFirstName" type="text" placeholder="e.g. Chioma"/>
+      </div>
+      <div class="field-wrap">
+        <label class="field-label">Recipient Last Name</label>
+        <input class="field-input" id="recipientLastName" type="text" placeholder="e.g. Adeyemi"/>
+      </div>
+      <div class="field-wrap">
+        <label class="field-label">Recipient Phone Number</label>
+        <input class="field-input" id="recipientPhone" type="tel" placeholder="e.g. 0901 234 5678"/>
+      </div>
+      <div class="field-wrap">
+        <label class="field-label">Recipient Email Address</label>
+        <input class="field-input" id="recipientEmail" type="email" placeholder="e.g. chioma@email.com"/>
+      </div>
+      <div class="field-wrap full">
+        <label class="field-label">A Personal Message (optional)</label>
+        <textarea class="field-input" id="giftMessage" placeholder="Write something sweet... e.g. You deserve this more than anyone I know. Enjoy every second!"></textarea>
+      </div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn-back-step" onclick="goToStep(2)">Back</button>
+      <button class="btn-next" onclick="showSummaryStep()">Review Gift</button>
+    </div>
+  </div>
+
+  <!-- STEP 4 — REVIEW & PAY -->
+  <div class="booking-panel" id="panel4">
+    <h2 class="form-section-title">Review &amp; <em>confirm</em></h2>
+
+    <div class="review-summary">
+      <div class="review-row"><span class="review-key">Treatment</span><span class="review-val" id="rev-service">—</span></div>
+      <div class="review-row"><span class="review-key">Date</span><span class="review-val" id="rev-date">—</span></div>
+      <div class="review-row"><span class="review-key">Time</span><span class="review-val" id="rev-time">—</span></div>
+      <div class="review-row"><span class="review-key">Gifting From</span><span class="review-val" id="rev-sender">—</span></div>
+      <div class="review-row"><span class="review-key">Gift For</span><span class="review-val" id="rev-recipient">—</span></div>
+      <div class="review-row"><span class="review-key">Revealed to Recipient</span><span class="review-val" id="rev-anon">—</span></div>
+      <div class="review-row review-row-total"><span class="review-key">Total Price</span><span class="review-total-val" id="rev-total">—</span></div>
+    </div>
+
+    <p style="font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px;">How would you like to pay?</p>
+    <div class="payment-options">
+      <div class="pay-opt selected" id="payHalf" onclick="selectPayment('half')">
+        <div class="pay-opt-top"><span class="pay-opt-label">50% Deposit</span><div class="pay-opt-check">✓</div></div>
+        <p class="pay-opt-desc">Pay half now to secure the gift appointment.</p>
+        <span class="pay-opt-amount" id="payHalfAmount">—</span>
+      </div>
+      <div class="pay-opt" id="payFull" onclick="selectPayment('full')">
+        <div class="pay-opt-top"><span class="pay-opt-label">Full Payment</span><div class="pay-opt-check">✓</div></div>
+        <p class="pay-opt-desc">Pay in full now. Nothing to pay on arrival.</p>
+        <span class="pay-opt-amount" id="payFullAmount">—</span>
+      </div>
+    </div>
+
+    <div class="pay-now-row">
+      <span class="pay-now-label">You pay now</span>
+      <span class="pay-now-amount" id="payNowAmount">—</span>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn-back-step" onclick="goToStep(3)">Back</button>
+      <button class="btn-next" onclick="confirmGift()">Confirm &amp; Pay Gift</button>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<div style="padding: 120px 40px 80px; display:none;" id="successWrap">
+  <div class="success-screen visible">
+    <div class="success-icon">🎁</div>
+    <h2 class="success-title">Gift <em>sent!</em></h2>
+    <p class="success-text" id="successText">
+      Your gift has been confirmed. The lucky recipient is about to have the most wonderful time.
+    </p>
+    <div class="success-ref" id="successRef">Ref: SS-000000</div>
+    <br/><br/>
+    <a href="index.html" class="btn-home">Back to Home</a>
+  </div>
+</div>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/2349058237360" class="whatsapp-float" target="_blank">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+  const state = {
+    gender: 'female',
+    category: '',
+    services: [],
+    date: '',
+    time: '',
+    anonymous: false
+  };
+
+  const serviceData = {
+    'Massage Therapy': [
+      { name: 'Swedish Massage (30 min)', female: '₦27,000', male: '₦27,000' },
+      { name: 'Swedish Massage (1 hr)', female: '₦35,000', male: '₦35,000' },
+      { name: 'Deep Tissue (30 min)', female: '₦30,000', male: '₦30,000' },
+      { name: 'Deep Tissue (1 hr)', female: '₦40,000', male: '₦40,000' },
+      { name: 'Deep Thermal Stone Massage', female: '₦45,000', male: '₦45,000' },
+      { name: 'G5 Massage', female: '₦45,000', male: '₦45,000' },
+      { name: 'Acupressure & Cupping Massage', female: '₦40,000', male: '₦40,000' },
+      { name: 'Aroma Delight Massage', female: '₦35,000', male: '₦35,000' },
+      { name: 'Red Light Therapy Massage', female: '₦45,000', male: '₦45,000' },
+      { name: 'Reflexology and Head Massage', female: '₦20,000', male: '₦20,000' },
+      { name: 'Couple Massage (Swedish + Deep Tissue)', female: '₦70,000', male: '₦70,000' },
+    ],
+    'Facial Treatments': [
+      { name: 'Skin Test and Analysis', female: '₦20,000', male: '₦20,000' },
+      { name: 'Classic Facials (45 min)', female: '₦25,000', male: '₦25,000' },
+      { name: 'Luminous Glow / Radiance Facials (45 min)', female: '₦30,000', male: '₦30,000' },
+      { name: 'Acne Facials (1 hr)', female: '₦45,000', male: '₦45,000' },
+      { name: 'Hydra Facials (1 hr)', female: '₦50,000', male: '₦50,000' },
+      { name: 'Anti-Aging / Rejuvenation Facials (1 hr)', female: '₦45,000', male: '₦45,000' },
+      { name: 'Gentleman Facials (1 hr)', female: '₦40,000', male: '₦40,000' },
+      { name: 'Decongesting Acne Facials (1 hr)', female: '₦52,000', male: '₦52,000' },
+      { name: 'Microdermabrasion Facials (1 hr)', female: '₦45,000', male: '₦45,000' },
+      { name: 'Dermaplanning (1 hr)', female: '₦40,000', male: '₦40,000' },
+      { name: 'Silk Signature Facials (1 hr)', female: '₦75,000', male: '₦75,000' },
+      { name: 'BB Glow Facials (1 hr)', female: '₦70,000', male: '₦70,000' },
+      { name: 'Bacne (1 hr)', female: '₦40,000', male: '₦40,000' },
+    ],
+    'Body Scrub & Hammam': [
+      { name: 'Soothe Steam Bath', female: '₦20,000', male: '₦20,000' },
+      { name: 'Exfoliating Silk Body Scrub', female: '₦25,000', male: '₦30,000' },
+      { name: 'Coffee Scrub', female: '₦35,000', male: '₦37,500' },
+      { name: 'Moroccan Traditional Hammam', female: '₦40,000', male: '₦43,700' },
+      { name: 'Extra Brightening Hammam', female: '₦45,000', male: '₦47,000' },
+      { name: 'Cleopatra Hammam', female: '₦52,000', male: '₦56,000' },
+      { name: 'Silk Glow Body Polish', female: '₦45,000', male: '₦48,500' },
+      { name: 'Exfoliating Body Polish', female: '₦57,500', male: '₦59,000' },
+      { name: 'Silk Signature Body Polish', female: '₦65,000', male: '₦70,000' },
+    ],
+    'IV Infusions': [
+      { name: 'Detox IV', female: '₦40,000', male: '₦50,000' },
+      { name: 'Skin Glow IV (1 session)', female: '₦65,000', male: '₦65,000' },
+      { name: 'Skin Glow IV (4 sessions)', female: '₦250,000', male: '₦250,000' },
+      { name: 'Whitening Booster IV (1 session)', female: '₦95,000', male: '₦95,000' },
+      { name: 'Whitening Booster IV (4 sessions)', female: '₦360,000', male: '₦360,000' },
+      { name: 'Anti-Aging IV Therapy (1 session)', female: '₦60,000', male: '₦60,000' },
+      { name: 'Anti-Aging IV Therapy (4 sessions)', female: '₦210,000', male: '₦210,000' },
+      { name: 'Vitamin B12 Shot', female: '₦25,000', male: '₦25,000' },
+      { name: 'Skin Brightening IV (1 session)', female: '₦70,000', male: '₦70,000' },
+      { name: 'Skin Brightening IV (4 sessions)', female: '₦260,000', male: '₦260,000' },
+      { name: 'Weightloss IV (1 session)', female: '₦70,000', male: '₦70,000' },
+      { name: 'Weightloss IV (4 sessions)', female: '₦250,000', male: '₦250,000' },
+      { name: 'Immune Booster IV', female: '₦50,000', male: '₦50,000' },
+    ],
+    'Chemical Peels': [
+      { name: 'Glycolic Acid Peel', female: '₦65,000', male: '₦65,000' },
+      { name: 'Mandelic Acid Peel', female: '₦60,000', male: '₦60,000' },
+      { name: 'Salicylic Acid Peel', female: '₦55,000', male: '₦55,000' },
+      { name: 'Lactic Acid Peel', female: '₦55,000', male: '₦55,000' },
+      { name: 'Azelaic Acid Peel', female: '₦60,000', male: '₦60,000' },
+      { name: 'Brightening Peel', female: '₦70,000', male: '₦70,000' },
+      { name: 'Melasma Peel', female: '₦80,000', male: '₦80,000' },
+      { name: 'TCA Peel', female: '₦60,000', male: '₦60,000' },
+      { name: 'Anti-Aging Peel', female: '₦60,000', male: '₦60,000' },
+      { name: 'Hand Brightening Peel', female: '₦25,000', male: '₦25,000' },
+      { name: 'Foot Brightening Peel', female: '₦25,000', male: '₦25,000' },
+      { name: 'Hand & Foot Brightening Peel', female: '₦45,000', male: '₦45,000' },
+  ],
+    'Body Sculpting': [
+      { name: 'Tummy and Waist Reduction (1 session)', female: '₦25,000', male: '₦25,000' },
+      { name: 'Tummy and Waist Reduction (4 sessions)', female: '₦95,000', male: '₦95,000' },
+      { name: 'Arm Reduction (1 session)', female: '₦20,000', male: '₦20,000' },
+      { name: 'Arm Reduction (4 sessions)', female: '₦75,000', male: '₦75,000' },
+      { name: 'Thigh Reduction (1 session)', female: '₦20,000', male: '₦20,000' },
+      { name: 'Thigh Reduction (4 sessions)', female: '₦75,000', male: '₦75,000' },
+      { name: 'Breast Enlargement (4 sessions)', female: '₦75,000', male: '₦75,000' },
+      { name: 'Butt and Hips Enlargement (1 session)', female: '₦30,000', male: '₦30,000' },
+      { name: 'Butt and Hips Enlargement (4 sessions)', female: '₦115,000', male: '₦115,000' },
+      { name: 'Breast Enlargement (1 session)', female: '₦25,000', male: '₦25,000' },
+      { name: 'Breast and Butt Enlargement (1 session)', female: '₦35,000', male: '₦35,000' },
+      { name: 'Breast and Butt Enlargement (4 sessions)', female: '₦130,000', male: '₦130,000' }
+    ],
+    'Microneedling': [
+      { name: 'Dark Spots / Hyperpigmentation (1 session)', female: '₦65,000', male: '₦65,000' },
+      { name: 'Dark Spots / Hyperpigmentation (4 sessions)', female: '₦250,000', male: '₦250,000' },
+      { name: 'Anti-Aging Microneedling', female: '₦75,000', male: '₦75,000' },
+      { name: 'PRP Glow Microneedling', female: '₦60,000', male: '₦60,000' },
+      { name: 'Stretch Mark Removal', female: '₦50,000+', male: '₦50,000+' },
+      { name: 'Dark Eye Circles (1 session)', female: '₦60,000', male: '₦60,000' },
+      { name: 'Dark Eye Circles (4 sessions)', female: '₦220,000', male: '₦220,000' },
+    ],
+    'Waxing': [
+      { name: 'Upper Lip', female: '₦6,000', male: '₦7,000' },
+      { name: 'Chin', female: '₦12,000', male: '₦18,000' },
+      { name: 'Brows', female: '₦5,000', male: '₦5,000' },
+      { name: 'Underarm', female: '₦15,000', male: '₦18,000' },
+      { name: 'Legs', female: '₦28,000', male: '₦30,000' },
+      { name: 'Half Legs', female: '₦20,000', male: '₦24,500' },
+      { name: 'Brazilian Wax', female: '₦35,000', male: '₦40,000' },
+      { name: 'Full Body', female: '₦112,000', male: '₦125,000' },
+      { name: 'Back Waxing', female: '₦18,000', male: '₦20,500' },
+      { name: 'Face Wax', female: '₦18,000', male: '₦23,000' },
+      { name: 'Full hands', female: '₦20,000', male: '₦23,000' },
+      { name: 'Bikini Line', female: '₦20,000', male: '₦25,000' },
+    ],
+    'Pedicure & Manicure': [
+      { name: 'Dry Pedicure', female: '₦10,000', male: '₦12,000' },
+      { name: 'Classic Pedicure', female: '₦12,000', male: '₦15,000' },
+      { name: 'Paraffin Pedicure', female: '₦25,000', male: '₦28,000' },
+      { name: 'Manicure', female: '₦6,000', male: '₦8,000' },
+      { name: 'Jelly Pedicure', female: '₦18,000', male: '₦22,000' },
+      { name: 'Jelly Pedicure and Manicure', female: '₦22,000', male: '₦28,000' },
+      { name: 'Foot Detox', female: '₦25,000', male: '₦28,500' },
+      { name: 'Detox Combo (Foot detox + Jelly Pedicure)', female: '₦35,000', male: '₦40,000' },
+    ],
+    'Teeth Whitening': [
+      { name: 'Teeth Whitening', female: '₦30,000', male: '₦30,000' },
+      { name: 'Scaling and Polishing', female: '₦30,000', male: '₦30,000' },
+      { name: 'Whitening Combo', female: '₦55,000', male: '₦55,000' },
+    ],
+    'PRP & HA Fillers': [
+      { name: 'PRP Lip Fillers', female: '₦60,000', male: '₦60,000' },
+      { name: 'PRP Nasolabial Folds', female: '₦40,000', male: '₦40,000' },
+      { name: 'PRP Under Eye', female: '₦50,000', male: '₦50,000' },
+      { name: 'PRP Full Face', female: '₦270,000', male: '₦270,000' },
+      { name: 'PRP Smile Lines', female: '₦50,000', male: '₦50,000' },
+      { name: 'PRP Chin', female: '₦70,000', male: '₦70,000' },
+      { name: 'PRP Cheeks', female: '₦80,000', male: '₦80,000' },
+      { name: 'PRP Hip Dips', female: '₦180,000', male: '₦180,000' },
+      { name: 'PRP Butt Fillers', female: '₦250,000', male: '₦250,000' },
+      { name: 'HA Lip Fillers', female: '₦90,000', male: '₦90,000' },
+      { name: 'HA Nasolabial Fold', female: '₦80,000', male: '₦80,000' },
+      { name: 'HA Full Face', female: '₦570,000', male: '₦570,000' },
+      { name: 'Hip Dips (HA)', female: '₦800,000', male: '₦800,000' },
+      { name: 'HA Cheek', female: '₦150,000', male: '₦150,000' },
+      { name: 'HA Chin', female: '₦140,000', male: '₦140,000' },
+      { name: 'HA Smile Lines', female: '₦90,000', male: '₦90,000' },
+      { name: 'HA Under Eye', female: '₦80,000', male: '₦80,000' },
+      { name: 'HA Butt Fillers', female: '₦1,200,000', male: '₦1,200,000' },
+    ],
+    'Weightloss / Lipolysis': [
+      { name: 'Lipolysis - 1 Vial (10ml)', female: '₦90,000', male: '₦90,000' },
+      { name: 'Lipolysis - 2 Vials', female: '₦170,000', male: '₦170,000' },
+      { name: 'Lipolysis - 4 Vials', female: '₦320,000', male: '₦320,000' },
+    ],
+    'Other Services': [
+      { name: 'Skintags', female: '₦30,000 +', male: '₦30,000 +' },
+      { name: 'Moles', female: '₦30,000', male: '₦30,000' },
+      { name: 'Warts', female: '₦50,000', male: '₦50,000 ' },
+      { name: 'Buttcials', female: '₦35,000 +', male: '₦35,000 +' },
+      { name: 'Vajacials + ingrown hair', female: '₦35,000', male: '₦35,000' },
+      { name: 'Vajacials combo (Waxing + Vajacials)', female: '₦60,000', male: '₦60,000' },
+    ],
+    'Packages': [
+      { name: 'Silver Package (Her) — Radiance Facials + Swedish + Classic Pedicure', female: '₦72,000', male: 'N/A' },
+      { name: 'Gold Package (Her) — Radiance Facials + Swedish + Jelly Pedicure + Body Polish', female: '₦125,000', male: 'N/A' },
+      { name: 'Diamond Package (Her) — Hydra Facials + swedish Massage + Jelly Pedicure + Silkglow Body Polish + Teeth Whitening', female: '₦168,000', male: 'N/A' },
+      { name: 'Silver Package (Him) — Gentleman Facials + Deep Tissue + Classic Pedicure', female: 'N/A', male: '₦90,000' },
+      { name: 'Gold Package (Him) — Gentleman Facials + Deep Tissue + Jelly Pedicure + Teeth Whitening', female: 'N/A', male: '₦120,000' },
+      { name: 'Diamond Package (Him) — Hydra Facials + Deep Thermal Stone massage + jelly Pedicure + Silk glow Body Polish + Teeth Whitening', female: 'N/A', male: '₦180,000' },
+      { name: 'Couples Silver — Swedish/deep tissue + Classic facials + Classic pedicure', female: '₦140,000', male: '₦140,000' },
+      { name: 'Couples Gold — Swedish/Deep Tissue  + Gentleman Facials/ Radiance Facials+ Jelly Pedicure and manicure + Soothe Steam Bath', female: '₦200,000', male: '₦200,000' },
+      { name: 'Couples Diamond — Swedish/Deep Tissue Massage + Gentleman Facials/ Radiance Facials + Jelly Pedicure + Silk Glow Body Polish', female: '₦260,000', male: '₦260,000' },
+      { name: 'Birthday Package — Classic pedicure + Classic facials + 30m Swedish massage + Teeth whitening session + Free Wine and decorations ', female: '₦90,000', male: '₦95,000' },
+      { name: 'Bridal Package — Radiance facials (2 times a month) + Skin test analysis (2 times a month) + Extra brightening Hammam (2 times a month) + Teeth whitening combo + Jelly pedicure + Full body waxing + Skin detox and brightening IV', female: '₦400,000', male: 'N/A' },
+    ],
+  };
+
+  const timeSlots = ['9:00 AM','10:00 AM','11:00 AM','12:00 PM','1:00 PM','2:00 PM','3:00 PM','4:00 PM','5:00 PM','6:00 PM'];
+  let currentDate = new Date();
+  let calYear = currentDate.getFullYear();
+  let calMonth = currentDate.getMonth();
+  let selectedPayment = 'half';
+  let currentExpandCategory = null;
+
+  function selectGender(gender, btn) {
+    state.gender = gender;
+    document.querySelectorAll('.gender-btn').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+    if (currentExpandCategory) renderExpand(currentExpandCategory);
+  }
+
+  function selectCategory(name, range, btn) {
+    document.querySelectorAll('.cat-btn').forEach(b => {
+      b.classList.remove('active-cat');
+      if (b !== btn) {
+        const bCat = b.querySelector('.cat-btn-name')?.textContent;
+        if (bCat) {
+          const catSvcs = serviceData[bCat] || [];
+          const hasSelected = state.services.some(s => catSvcs.some(c => c.name === s.name));
+          if (!hasSelected) b.classList.remove('selected');
+        }
+      }
+    });
+
+    const expand = document.getElementById('servicesExpand');
+    if (currentExpandCategory === name && expand.classList.contains('open')) {
+      closeExpand();
+      return;
+    }
+
+    currentExpandCategory = name;
+    state.category = name;
+    btn.classList.add('active-cat', 'selected');
+
+    // Move expand panel to directly after the clicked button's row
+    const grid = document.getElementById('categoryGrid');
+    const allBtns = Array.from(grid.querySelectorAll('.cat-btn'));
+    const cols = window.innerWidth <= 480 ? 2 : 3;
+    const btnIndex = allBtns.indexOf(btn);
+    const lastInRowIndex = Math.min((Math.floor(btnIndex / cols) + 1) * cols - 1, allBtns.length - 1);
+    allBtns[lastInRowIndex].after(expand);
+
+    renderExpand(name);
+    expand.classList.add('open');
+
+    setTimeout(() => expand.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 100);
+  }
+
+  function renderExpand(category) {
+    const services = serviceData[category] || [];
+    document.getElementById('expandTitle').textContent = category;
+    const list = document.getElementById('expandList');
+    list.innerHTML = '';
+
+    services.forEach(svc => {
+      const price = state.gender === 'female' ? svc.female : svc.male;
+      if (price === 'N/A') return;
+      const isSelected = state.services.some(s => s.name === svc.name);
+      const item = document.createElement('div');
+      item.className = 'expand-svc-item' + (isSelected ? ' selected' : '');
+      item.innerHTML = `
+        <div class="expand-svc-left">
+          <div class="expand-checkbox">${isSelected ? '✓' : ''}</div>
+          <span class="expand-svc-name">${svc.name}</span>
+        </div>
+        <span class="expand-svc-price">${price}</span>
+      `;
+      item.addEventListener('click', () => toggleService(svc.name, price, item));
+      list.appendChild(item);
+    });
+    updateExpandCount();
+  }
+
+  function toggleService(name, price, item) {
+    const idx = state.services.findIndex(s => s.name === name);
+    if (idx > -1) {
+      state.services.splice(idx, 1);
+      item.classList.remove('selected');
+      item.querySelector('.expand-checkbox').textContent = '';
+    } else {
+      state.services.push({ name, price });
+      item.classList.add('selected');
+      item.querySelector('.expand-checkbox').textContent = '✓';
+    }
+    updateExpandCount();
+    updateServiceCounter();
+    updateCategoryHighlight();
+  }
+
+  function updateExpandCount() {
+    if (!currentExpandCategory) return;
+    const catSvcs = serviceData[currentExpandCategory] || [];
+    const count = state.services.filter(s => catSvcs.some(c => c.name === s.name)).length;
+    document.getElementById('expandCount').textContent = count + ' selected';
+  }
+
+  function closeExpand() {
+    document.getElementById('servicesExpand').classList.remove('open');
+    document.querySelectorAll('.cat-btn').forEach(b => {
+      b.classList.remove('active-cat');
+      const catName = b.querySelector('.cat-btn-name')?.textContent;
+      if (catName) {
+        const catSvcs = serviceData[catName] || [];
+        const hasSelected = state.services.some(s => catSvcs.some(c => c.name === s.name));
+        if (!hasSelected) b.classList.remove('selected');
+      }
+    });
+    currentExpandCategory = null;
+  }
+
+  function updateCategoryHighlight() {
+    document.querySelectorAll('.cat-btn').forEach(btn => {
+      const catName = btn.querySelector('.cat-btn-name')?.textContent;
+      if (!catName) return;
+      const catSvcs = serviceData[catName] || [];
+      const hasSelected = state.services.some(s => catSvcs.some(c => c.name === s.name));
+      if (hasSelected) btn.classList.add('selected');
+      else if (!btn.classList.contains('active-cat')) btn.classList.remove('selected');
+    });
+  }
+
+  function updateServiceCounter() {
+    const counter = document.getElementById('serviceCounter');
+    const counterText = document.getElementById('serviceCounterText');
+    const counterTotal = document.getElementById('serviceCounterTotal');
+    const count = state.services.length;
+    if (count === 0) { counter.style.display = 'none'; return; }
+    counter.style.display = 'flex';
+    counterText.textContent = 'You have selected ' + count + ' service' + (count !== 1 ? 's' : '');
+    counterTotal.textContent = calculateTotal();
+  }
+
+  function calculateTotal() {
+    let total = 0;
+    state.services.forEach(s => {
+      const num = parseInt((s.price || '0').replace(/[^\d]/g, ''));
+      if (!isNaN(num)) total += num;
+    });
+    return total > 0 ? '₦' + total.toLocaleString() : 'See pricing';
+  }
+
+  function toggleAnonymity() {
+    state.anonymous = !state.anonymous;
+    const toggle = document.getElementById('anonToggle');
+    if (state.anonymous) toggle.classList.add('on');
+    else toggle.classList.remove('on');
+  }
+
+  function renderCalendar() {
+    const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    document.getElementById('calMonth').textContent = months[calMonth] + ' ' + calYear;
+    const grid = document.getElementById('calGrid');
+    grid.innerHTML = '';
+    ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'].forEach(d => {
+      const el = document.createElement('div'); el.className = 'cal-day-name'; el.textContent = d; grid.appendChild(el);
+    });
+    const firstDay = new Date(calYear, calMonth, 1).getDay();
+    const daysInMonth = new Date(calYear, calMonth + 1, 0).getDate();
+    const today = new Date();
+    for (let i = 0; i < firstDay; i++) { const el = document.createElement('div'); el.className = 'cal-day empty'; grid.appendChild(el); }
+    for (let d = 1; d <= daysInMonth; d++) {
+      const el = document.createElement('div'); el.className = 'cal-day'; el.textContent = d;
+      const thisDate = new Date(calYear, calMonth, d);
+      const dayOfWeek = thisDate.getDay();
+      const isPast = thisDate < new Date(today.getFullYear(), today.getMonth(), today.getDate());
+      const isClosed = dayOfWeek === 0 || dayOfWeek === 1;
+      if (isPast || isClosed) { el.classList.add('disabled'); }
+      else {
+        if (thisDate.toDateString() === today.toDateString()) el.classList.add('today');
+        el.onclick = () => selectDate(calYear, calMonth, d, el);
+      }
+      grid.appendChild(el);
+    }
+  }
+
+  function changeMonth(dir) {
+    calMonth += dir;
+    if (calMonth > 11) { calMonth = 0; calYear++; }
+    if (calMonth < 0) { calMonth = 11; calYear--; }
+    renderCalendar();
+  }
+
+  function selectDate(year, month, day, el) {
+    document.querySelectorAll('.cal-day').forEach(d => d.classList.remove('selected'));
+    el.classList.add('selected');
+    const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    state.date = months[month] + ' ' + day + ', ' + year;
+    document.getElementById('selectedDateLabel').textContent = state.date;
+    renderTimeSlots();
+    document.getElementById('timeslotsWrap').classList.add('visible');
+    state.time = '';
+  }
+
+  function renderTimeSlots() {
+    const grid = document.getElementById('timeslotsGrid');
+    grid.innerHTML = '';
+
+    const now = new Date();
+    const selectedDate = new Date(state.date);
+    const isToday =
+      selectedDate.getFullYear() === now.getFullYear() &&
+      selectedDate.getMonth() === now.getMonth() &&
+      selectedDate.getDate() === now.getDate();
+
+    timeSlots.forEach(slot => {
+      const el = document.createElement('div');
+      el.className = 'time-slot';
+      el.textContent = slot;
+
+      // If selected date is today, grey out slots whose time has already passed
+      if (isToday) {
+        const [time, period] = slot.split(' ');
+        let [hours, minutes] = time.split(':').map(Number);
+        if (period === 'PM' && hours !== 12) hours += 12;
+        if (period === 'AM' && hours === 12) hours = 0;
+        const slotTime = new Date();
+        slotTime.setHours(hours, minutes || 0, 0, 0);
+        if (slotTime <= now) {
+          el.classList.add('booked');
+          el.onclick = null;
+          grid.appendChild(el);
+          return;
+        }
+      }
+
+      el.onclick = () => selectTime(slot, el);
+      grid.appendChild(el);
+    });
+  }
+  function selectTime(time, el) {
+    document.querySelectorAll('.time-slot').forEach(t => t.classList.remove('selected'));
+    el.classList.add('selected'); state.time = time;
+  }
+
+  function goToStep(step) {
+    document.querySelectorAll('.booking-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('panel' + step).classList.add('active');
+    document.querySelectorAll('.step').forEach((s, i) => {
+      s.classList.remove('active', 'done');
+      if (i + 1 < step) s.classList.add('done');
+      if (i + 1 === step) s.classList.add('active');
+    });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function goToStep2() {
+    if (!state.services || state.services.length === 0) { alert('Please select at least one treatment to gift.'); return; }
+    closeExpand();
+    goToStep(2);
+  }
+
+  function goToStep3() {
+    if (!state.date) { alert('Please select a date.'); return; }
+    if (!state.time) { alert('Please select a time.'); return; }
+    goToStep(3);
+  }
+
+  function selectPayment(type) {
+    selectedPayment = type;
+    document.getElementById('payHalf').classList.toggle('selected', type === 'half');
+    document.getElementById('payFull').classList.toggle('selected', type === 'full');
+    updatePayNow();
+  }
+
+  function updatePayNow() {
+    const totalPrice = calculateTotal();
+    const numericTotal = parseInt(totalPrice.replace(/[^\d]/g, '')) || 0;
+    const amount = selectedPayment === 'half' ? Math.round(numericTotal * 0.5) : numericTotal;
+    const el = document.getElementById('payNowAmount');
+    if (el) el.textContent = numericTotal > 0 ? '₦' + amount.toLocaleString() : '—';
+  }
+
+  function showSummaryStep() {
+    const sFirst = document.getElementById('senderFirstName').value.trim();
+    const sLast = document.getElementById('senderLastName').value.trim();
+    const sPhone = document.getElementById('senderPhone').value.trim();
+    const sEmail = document.getElementById('senderEmail').value.trim();
+    const rFirst = document.getElementById('recipientFirstName').value.trim();
+    const rLast = document.getElementById('recipientLastName').value.trim();
+    const rPhone = document.getElementById('recipientPhone').value.trim();
+    const rEmail = document.getElementById('recipientEmail').value.trim();
+
+    if (!sFirst || !sLast) { alert('Please enter your name.'); return; }
+    if (!sPhone) { alert('Please enter your phone number.'); return; }
+    if (!sEmail) { alert('Please enter your email address.'); return; }
+    if (!rFirst || !rLast) { alert('Please enter the recipient\'s name.'); return; }
+    if (!rPhone) { alert('Please enter the recipient\'s phone number.'); return; }
+    if (!rEmail) { alert('Please enter the recipient\'s email address.'); return; }
+
+    document.getElementById('rev-service').textContent = state.services.map(s => s.name).join(', ');
+    document.getElementById('rev-date').textContent = state.date;
+    document.getElementById('rev-time').textContent = state.time;
+    document.getElementById('rev-sender').textContent = sFirst + ' ' + sLast;
+    document.getElementById('rev-recipient').textContent = rFirst + ' ' + rLast;
+    document.getElementById('rev-anon').textContent = state.anonymous ? 'No — Anonymous gift' : 'Yes — Your name will be shared';
+
+    const totalPrice = calculateTotal();
+    document.getElementById('rev-total').textContent = totalPrice;
+
+    const numericTotal = parseInt(totalPrice.replace(/[^\d]/g, '')) || 0;
+    const half = Math.round(numericTotal * 0.5);
+    document.getElementById('payHalfAmount').textContent = numericTotal ? '₦' + half.toLocaleString() : '—';
+    document.getElementById('payFullAmount').textContent = numericTotal ? '₦' + numericTotal.toLocaleString() : '—';
+    selectedPayment = 'half';
+    document.getElementById('payHalf').classList.add('selected');
+    document.getElementById('payFull').classList.remove('selected');
+    updatePayNow();
+    goToStep(4);
+  }
+
+  function confirmGift() {
+    const sFirst = document.getElementById('senderFirstName').value.trim();
+    const sLast = document.getElementById('senderLastName').value.trim();
+    const sPhone = document.getElementById('senderPhone').value.trim();
+    const sEmail = document.getElementById('senderEmail').value.trim();
+    const rFirst = document.getElementById('recipientFirstName').value.trim();
+    const rLast = document.getElementById('recipientLastName').value.trim();
+    const rPhone = document.getElementById('recipientPhone').value.trim();
+    const rEmail = document.getElementById('recipientEmail').value.trim();
+    const giftMessage = document.getElementById('giftMessage').value.trim();
+
+    const totalPrice = calculateTotal();
+    const numericTotal = parseInt(totalPrice.replace(/[^\d]/g, '')) || 0;
+    if (numericTotal === 0) { alert('Could not calculate total. Please go back and reselect services.'); return; }
+
+    const payAmount = selectedPayment === 'half' ? Math.round(numericTotal * 0.5) : numericTotal;
+    const payAmountKobo = payAmount * 100;
+    const giftRef = 'SS-GIFT-' + Date.now();
+
+    const giftData = {
+      ref: giftRef,
+      gender: state.gender,
+      services: state.services.map(s => s.name).join(', '),
+      price: totalPrice,
+      date: state.date,
+      time: state.time,
+      anonymous: state.anonymous,
+      senderName: sFirst + ' ' + sLast,
+      senderEmail: sEmail,
+      senderPhone: sPhone,
+      recipientName: rFirst + ' ' + rLast,
+      recipientEmail: rEmail,
+      recipientPhone: rPhone,
+      giftMessage: giftMessage,
+      paymentType: selectedPayment,
+      amountPaid: '₦' + payAmount.toLocaleString()
+    };
+
+    const handler = PaystackPop.setup({
+      key: 'pk_live_254c273b67cd0ec2771ff9db79e8c885485022b1',
+      email: sEmail,
+      amount: payAmountKobo,
+      currency: 'NGN',
+      ref: giftRef,
+      metadata: {
+        custom_fields: [
+          { display_name: 'Gift From', variable_name: 'sender', value: giftData.senderName },
+          { display_name: 'Gift For', variable_name: 'recipient', value: giftData.recipientName },
+          { display_name: 'Treatment', variable_name: 'service', value: giftData.services },
+          { display_name: 'Date', variable_name: 'date', value: state.date },
+          { display_name: 'Time', variable_name: 'time', value: state.time }
+        ]
+      },
+      callback: function(response) {
+        handleGiftPaymentSuccess(response, giftData);
+      },
+      onClose: function() {
+        alert('Payment was not completed. The gift has not been confirmed. Please try again or contact us on WhatsApp.');
+      }
+    });
+
+    handler.openIframe();
+  }
+
+  function handleGiftPaymentSuccess(response, giftData) {
+
+    // 1. Show success screen IMMEDIATELY — don't wait for server
+    const successText = document.getElementById('successText');
+    successText.innerHTML = `
+      Your gift booking is confirmed! 🎉<br/><br/>
+      <strong>${giftData.recipientName}</strong> has been gifted a luxury spa experience at Silk Spa.<br/><br/>
+      A confirmation has been sent to <strong>${giftData.senderEmail}</strong>.<br/>
+      The recipient will receive a beautiful notification at <strong>${giftData.recipientEmail}</strong>
+      ${giftData.anonymous ? ' — without revealing your identity.' : ' with your name included.'}<br/><br/>
+      They are going to have the absolute best time. You did a great thing. ✦
+    `;
+    document.getElementById('successRef').textContent = 'Gift Ref: ' + giftData.ref;
+    document.getElementById('mainWrap').style.display = 'none';
+    document.getElementById('successWrap').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // 2. Send emails IMMEDIATELY — don't wait for server
+    sendGiftEmails(giftData);
+
+    // 3. Verify payment + save booking in background — non-blocking
+    fetch('https://silkspa-server.onrender.com/api/verify-payment', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ reference: response.reference })
+    })
+    .then(res => res.json())
+    .then(verifyData => {
+      if (!verifyData.success) {
+        console.warn('Payment verification returned unsuccessful for ref:', response.reference);
+        return;
+      }
+      // Save booking to database
+      return fetch('https://silkspa-server.onrender.com/api/bookings', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          ref: giftData.ref,
+          name: giftData.recipientName + ' (Gift from ' + (giftData.anonymous ? 'Anonymous' : giftData.senderName) + ')',
+          email: giftData.recipientEmail,
+          phone: giftData.recipientPhone,
+          gender: giftData.gender,
+          category: 'Gift Booking',
+          service: giftData.services,
+          price: giftData.price,
+          date: giftData.date,
+          time: giftData.time,
+          notes: 'GIFT BOOKING. Gifted by: ' + (giftData.anonymous ? 'Anonymous' : giftData.senderName) + '. Message: ' + (giftData.giftMessage || 'None'),
+          payment_status: giftData.paymentType === 'full' ? 'paid in full' : 'deposit paid',
+          status: 'confirmed'
+        })
+      });
+    })
+    .then(() => console.log('✅ Booking saved to database'))
+    .catch(err => console.warn('Background save failed (non-critical):', err));
+  }
+
+  function sendGiftEmails(giftData) {
+    const senderDisplay = giftData.anonymous ? 'A Secret Admirer' : giftData.senderName;
+
+    emailjs.send('service_lrubxe7', 'template_7b66kca', {
+      customer_name: giftData.senderName,
+      customer_email: giftData.senderEmail,
+      booking_ref: giftData.ref,
+      services: giftData.services,
+      date: giftData.date,
+      time: giftData.time,
+      total_price: giftData.price,
+      deposit_paid: giftData.amountPaid,
+      balance_due: giftData.paymentType === 'full' ? '₦0 — Paid in full' : '₦' + (parseInt(giftData.price.replace(/[^\d]/g, '')) - parseInt(giftData.amountPaid.replace(/[^\d]/g, ''))).toLocaleString(),
+      payment_note: 'You have gifted ' + giftData.recipientName + ' a luxury spa experience at Silk Spa. ' +
+        (giftData.anonymous ? 'Your identity will remain anonymous.' : 'Your name will be shared with the recipient.')
+    }).catch(err => console.error('Sender email error:', err));
+
+    emailjs.send('service_lrubxe7', 'template_09vssai', {
+      recipient_name: giftData.recipientName,
+      recipient_email: giftData.recipientEmail,
+      booking_ref: giftData.ref,
+      services: giftData.services,
+      date: giftData.date,
+      time: giftData.time,
+      payment_note: 'Surprise! ' + senderDisplay + ' has gifted you a luxury spa experience at Silk Spa Wellness and Beauty, Abuja. ' +
+        'Your appointment is booked for ' + giftData.date + ' at ' + giftData.time + '. ' +
+        'We are located at House 7, 32 Crescent, 3rd Avenue, Gwarimpa, FCT Abuja. ' +
+        (giftData.giftMessage ? 'Personal message: "' + giftData.giftMessage + '"' : '') +
+        ' Get ready to be completely pampered!'
+    }).catch(err => console.error('Recipient email error:', err));
+  }
+  sendAdminAlert({
+  name: giftData.recipientName + ' (Gift from ' + giftData.senderName + ')',
+  email: giftData.senderEmail,
+  phone: giftData.senderPhone || '—',
+  service: giftData.services,
+  date: giftData.date,
+  time: giftData.time,
+  ref: giftData.ref
+}, giftData.paymentType, giftData.amountPaid);
+
+  // ── INIT ──
+  renderCalendar();
+</script>
+</body>
+</html>
